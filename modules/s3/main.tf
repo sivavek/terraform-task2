@@ -9,6 +9,4 @@ resource "aws_s3_bucket" "this" {
     versioning_configuration {
       status = var.versioning ? "Enabled" : "Suspended"
     }
-
-  # Use bucket policy or grant block for access control instead of deprecated 'acl'
 }
