@@ -55,7 +55,7 @@ terraform apply
 
 ```
 
->[!Note:] Terraform will prompt for confirmation before provisioning resources.
+>[!Note] Terraform will prompt for confirmation before provisioning resources.
 
 # 🔐 Modules and Parameters
 
