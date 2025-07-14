@@ -55,12 +55,14 @@ terraform apply
 
 ```
 
--[!Note:] Terraform will prompt for confirmation before provisioning resources.
+[!Note:] Terraform will prompt for confirmation before provisioning resources.
 
-🔐 Modules and Parameters
+# 🔐 Modules and Parameters
+
 Below are the key input parameters for each module. Update the respective module source files if needed.
 
-RDS Module (./modules/rds)
+## RDS Module (./modules/rds)
+
 db_identifier: RDS instance name
 
 instance_class: e.g., db.t3.micro
@@ -71,7 +73,8 @@ engine: e.g., mysql
 
 username / password: DB login credentials
 
-EC2 Module (./modules/ec2)
+## EC2 Module (./modules/ec2)
+
 ami_id: Amazon Machine Image ID
 
 instance_type: e.g., t2.micro
@@ -80,14 +83,16 @@ subnet_id: ID of the public subnet
 
 name: EC2 instance name tag
 
-S3 Module (./modules/s3)
+## S3 Module (./modules/s3)
+
 bucket_name: Unique S3 bucket name
 
 versioning: true to enable versioning
 
 public_access: false to block public access
 
-ALB Module (./modules/alb)
+## ALB Module (./modules/alb)
+
 name: ALB name
 
 internal: false for internet-facing
@@ -96,7 +101,8 @@ subnet_ids: List of public subnet IDs
 
 security_group_ids: SG for ALB traffic rules
 
-📝 Notes
+## 📝 Notes
+
 Make sure your AWS CLI or environment is configured with appropriate credentials.
 
 AMI ID should be valid for the region (us-east-1). Replace placeholder if necessary.
@@ -105,7 +111,7 @@ admin12345 is a sample DB password; consider using secrets management in product
 
 
 📁 Project Structure
-
+```
 terraform-task2/
 ├── main.tf
 └── modules/
@@ -113,11 +119,11 @@ terraform-task2/
     ├── ec2/
     ├── rds/
     └── s3/
+```
 
-
-📜 License
+# 📜 License
 MIT License — see LICENSE for details.
 
-👤 Author
+# 👤 Author
 Vivek Sivakumar
 
